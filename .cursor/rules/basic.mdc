@@ -1,0 +1,136 @@
+---
+description: 项目需求描述，结构规划
+globs: 
+alwaysApply: false
+---
+律师平时会接到很多批量的案件，需要从pdf的材料中提取很多诉讼的基本信息整理成excel然后再批量生成诉状等材料。我想制作一个网页，帮助我整理这些pdf信息。第一步是识别pdf的文字，首先使用ocr的api进行识别，然后再把ocr的结果结合vlm再识别一次。第二步是结合这两次识别的结果，使用llm提取对应的信息整理为表格。第三步是在网页上根据pdf来进行核对和修改。同时有动态增加pdf的能力。假如我想要轻量化开发，暂时不需要账号系统，一个人使用，但是之后有可能添加。
+
+**核心架构思想：前后端分离的单体应用（初期），具备向微服务演进的能力**
+
+*   **初期**：我们将构建一个单体应用，但逻辑上前后端分离。后端API负责所有业务逻辑和数据处理，前端负责用户界面和交互。这样做可以快速开发和部署。
+*   **扩展**：当业务发展，可以将后端的一些计算密集型或独立功能模块（如PDF识别处理模块）平滑地拆分为独立的服务。
+
+**技术选型与组件建议**
+
+1.  **后端：FastAPI (Python)**
+    *   **理由**：
+        *   **轻量且极高性能**：FastAPI是基于Starlette和Pydantic构建的现代Python Web框架，性能接近Node.js和Go。
+        *   **开发效率高**：利用Python的类型提示，代码健壮且易于维护，自动生成API文档（Swagger UI），极大方便调试和前后端协作。
+        *   **强大的异步支持**：非常适合处理I/O密集型任务，如文件上传、调用外部OCR/VLM/LLM API，不会阻塞主线程，提升并发处理能力。
+        *   **Python生态**：Python在数据处理、机器学习、AI集成方面拥有无与伦比的库支持，方便您集成各种PDF处理、OCR和LLM工具。
+    *   **轻量化实现**：FastAPI本身依赖少，启动快。
+    *   **扩展性**：模块化设计，易于添加新功能；天然支持异步，方便对接消息队列；易于容器化部署。
+
+2.  **前端：Vue.js (或 React)**
+    *   **理由 (Vue.js)**：
+        *   **渐进式框架**：上手快，学习曲线平缓，您可以从简单的页面开始，按需引入复杂功能。
+        *   **轻量级**：核心库体积小，性能良好。
+        *   **组件化**：便于构建可复用的UI组件，提升开发效率和可维护性。
+        *   **生态活跃**：有大量UI库和插件可用。
+    *   **React 也是优秀的选择**：如果您更熟悉React，它同样能满足需求，拥有更庞大的生态和社区。
+    *   **轻量化实现**：初期可以使用Vite快速搭建项目，按需引入组件库。
+    *   **扩展性**：组件化架构易于扩展和维护，现代前端框架都支持构建大型单页应用(SPA)。
+
+3.  **数据存储：SQLite (初期) -> PostgreSQL/MySQL (未来)**
+    *   **理由 (SQLite - 初期)**：
+        *   **零配置，服务器无关**：SQLite是一个文件型数据库，无需单独安装和配置数据库服务，直接集成在应用中，非常适合单人、轻量化启动。
+        *   **Python内置支持**：Python标准库`sqlite3`可直接使用，FastAPI通过ORM（如SQLAlchemy）可以方便操作。
+    *   **轻量化实现**：数据存储为一个单一的`.db`文件。
+    *   **扩展性**：
+        *   当数据量增长、并发访问增多或需要更高级的数据库特性（如用户权限、复杂事务）时，可以平滑迁移到更强大的关系型数据库，如PostgreSQL（推荐）或MySQL。
+        *   使用SQLAlchemy作为ORM层，可以使数据库的切换成本降到最低，只需修改连接配置和少量方言相关的代码。
+
+4.  **PDF处理与AI集成模块 (后端Python实现)**
+    *   **PDF文本提取 (第一轮OCR)**：
+        *   推荐使用成熟的**OCR云服务API**（如阿里云、腾讯云、百度智能云的文字识别，或Google Cloud Vision API）。优点是识别准确率高、无需自行部署和维护模型。
+        *   备选：开源OCR库如`Tesseract OCR`（通过`pytesseract`库调用），但可能需要自行调优和部署。
+    *   **VLM辅助识别 (第二轮)**：
+        *   同样，可以考虑**VLM相关的云服务API**或研究如何部署和调用开源的VLM模型（如LLaVA、Qwen-VL等，需要一定的硬件资源和技术储备）。
+        *   这一步的目的是结合视觉信息对OCR结果进行校正或补充。
+    *   **LLM信息提取 (信息结构化)**：
+        *   使用强大的**LLM API**（如OpenAI的GPT系列、Anthropic的Claude、国内的文心一言、通义千问等）。
+        *   关键在于设计有效的**Prompt Engineering**，引导LLM从识别出的文本中准确提取诉讼基本信息（案号、当事人、诉讼请求、事实与理由等）并按指定格式输出。
+    *   这些模块应封装在后端服务中，由FastAPI的API接口调用。
+
+5.  **后台任务处理：FastAPI Background Tasks (初期) -> Celery + Redis/RabbitMQ (未来)**
+    *   **理由**：PDF识别和LLM提取是耗时操作，不能阻塞API请求，影响用户体验。
+    *   **初期方案 (FastAPI Background Tasks)**：FastAPI内置了后台任务功能，可以将这些耗时任务提交到后台执行。API可以立即返回一个任务ID或处理中的状态，前端通过轮询或WebSocket（更优）来获取最终结果。这对于初期单用户、并发量不高的场景是足够的。
+    *   **未来扩展 (Celery)**：当用户量增加，并发处理任务增多，或者需要更可靠的任务队列、重试机制、定时任务等功能时，可以引入Celery（Python的分布式任务队列）配合消息中间件（如Redis或RabbitMQ）。
+
+**架构组件与流程**
+
+```mermaid
+graph LR
+    subgraph "用户浏览器 (前端 - Vue.js)"
+        A[文件上传界面] --> B{调用后端API};
+        B --> C[PDF预览];
+        B --> D[表格展示/编辑];
+        D --> B;
+    end
+
+    subgraph "服务器 (后端 - FastAPI)"
+        API[API接口 /upload, /status, /results, /update]
+        Logic[业务逻辑层]
+        AsyncTasks[后台任务处理]
+        DB[(SQLite/PostgreSQL)]
+
+        B --> API;
+        API --> Logic;
+        Logic -- 异步处理 --> AsyncTasks;
+        AsyncTasks -- 调用 --> OCR_API[OCR云服务];
+        AsyncTasks -- 调用 --> VLM_API[VLM云服务/模型];
+        AsyncTasks -- 调用 --> LLM_API[LLM云服务];
+        AsyncTasks -- 结果存储 --> DB;
+        Logic -- 读取/写入 --> DB;
+    end
+
+    subgraph "外部AI服务"
+        OCR_API;
+        VLM_API;
+        LLM_API;
+    end
+
+    style A fill:#ccf,stroke:#333,stroke-width:2px
+    style C fill:#ccf,stroke:#333,stroke-width:2px
+    style D fill:#ccf,stroke:#333,stroke-width:2px
+    style API fill:#cfc,stroke:#333,stroke-width:2px
+    style Logic fill:#cfc,stroke:#333,stroke-width:2px
+    style AsyncTasks fill:#cfc,stroke:#333,stroke-width:2px
+    style DB fill:#fcc,stroke:#333,stroke-width:2px
+```
+
+**轻量化开发步骤建议**
+
+1.  **环境准备**：安装Python, FastAPI, Uvicorn (ASGI服务器), Node.js, Vue CLI (或Vite)。
+2.  **后端API骨架 (FastAPI)**：
+    *   定义核心API端点：文件上传、获取处理状态、获取提取结果、保存修改结果。
+    *   集成SQLite与SQLAlchemy，定义数据模型（如`PDFCase`表，存储PDF信息、状态、提取内容等）。
+    *   实现文件上传逻辑，将文件保存到服务器指定位置。
+3.  **核心处理流程 PoC (Proof of Concept) (后端)**：
+    *   **步骤一 (OCR)**：先只实现调用OCR API，将提取的纯文本存入数据库。
+    *   **步骤二 (LLM)**：基于OCR的文本，调用LLM API尝试提取1-2个关键字段。
+    *   将上述处理流程放入FastAPI的后台任务中。
+4.  **前端基础界面 (Vue.js)**：
+    *   实现文件上传组件。
+    *   调用后端API上传文件，并轮询获取处理状态和结果。
+    *   以简单文本或表格形式展示LLM提取的结果。
+5.  **迭代完善**：
+    *   **PDF预览 (前端)**：集成`pdf.js`或类似库，让用户可以直接在网页上查看上传的PDF。
+    *   **表格编辑与核对 (前端)**：将提取的信息以可编辑表格形式展示，用户修改后可以保存回后端。
+    *   **VLM集成 (后端)**：在OCR之后、LLM之前，加入VLM辅助识别步骤，优化输入给LLM的文本质量。
+    *   **Prompt调优 (后端)**：持续优化喂给LLM的Prompt，提高信息提取的准确性和全面性。
+    *   **动态增删PDF (前后端)**：完善PDF列表管理、单个PDF删除等功能。
+    *   **用户体验和错误处理**。
+
+**未来扩展考虑**
+
+*   **账户系统**：
+    *   后端：FastAPI有很多成熟的认证库（如`FastAPI-Users`, `FastAPI-Login`）可以集成，实现用户注册、登录、权限管理。数据库增加用户表。
+    *   前端：增加登录/注册页面，请求头携带认证Token。
+*   **数据库升级**：当SQLite遇到性能瓶颈，修改SQLAlchemy的数据库连接配置，指向PostgreSQL或MySQL服务器，并进行数据迁移。
+*   **专业后台任务队列**：当FastAPI的Background Tasks不足以支撑高并发或复杂任务调度时，引入Celery + Redis/RabbitMQ。
+*   **服务拆分（微服务化）**：如果PDF识别处理模块（OCR+VLM+LLM）逻辑非常复杂或资源消耗大，可以将其独立为一个服务，通过内部API与主应用通信。
+*   **部署优化**：使用Docker容器化应用，方便部署和迁移；使用Nginx作为反向代理和静态文件服务器。
+
+这个架构方案力求在初期保持简单和快速开发，同时为未来的功能扩展和性能提升预留了清晰的路径。Python及其生态系统在AI应用和数据处理方面非常强大，将为您的项目提供坚实的技术支撑。祝您项目顺利！
+

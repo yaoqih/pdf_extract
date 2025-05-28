@@ -1,0 +1,60 @@
+# PDF证据材料信息提取系统 - 环境变量配置示例
+
+# ===== API配置 =====
+# 统一使用OpenAI兼容的API格式，支持多种模型
+
+# API密钥（优先使用OPENAI_API_KEY，如果没有则使用GOOGLE_API_KEY）
+OPENAI_API_KEY=your_api_key_here
+# GOOGLE_API_KEY=your_google_api_key_here
+
+# API基础URL（根据你使用的服务提供商设置）
+OPENAI_API_BASE=https://api.openai.com
+# 如果使用其他兼容OpenAI的服务，例如：
+# OPENAI_API_BASE=https://api.deepseek.com
+# OPENAI_API_BASE=https://api.anthropic.com
+# OPENAI_API_BASE=https://generativelanguage.googleapis.com
+
+# ===== 模型配置 =====
+# LLM模型（用于信息提取）
+LLM_MODEL=gemini-2.0-flash-exp
+# 其他可选模型：
+# LLM_MODEL=gpt-4o
+# LLM_MODEL=gpt-4o-mini
+# LLM_MODEL=claude-3-5-sonnet-20241022
+# LLM_MODEL=deepseek-chat
+
+# VLM模型（用于图像分析）
+VLM_MODEL=gemini-2.0-flash-exp
+# 其他可选模型：
+# VLM_MODEL=gpt-4o
+# VLM_MODEL=claude-3-5-sonnet-20241022
+
+# ===== 百度OCR配置（可选） =====
+# 如果需要使用百度OCR服务
+BAIDU_API_KEY=your_baidu_api_key
+BAIDU_SECRET_KEY=your_baidu_secret_key
+
+# ===== 配置说明 =====
+# 1. 如果使用OpenAI官方API：
+#    OPENAI_API_KEY=sk-xxx
+#    OPENAI_API_BASE=https://api.openai.com
+#    LLM_MODEL=gpt-4o
+#    VLM_MODEL=gpt-4o
+
+# 2. 如果使用Google Gemini（通过OpenAI兼容接口）：
+#    OPENAI_API_KEY=your_gemini_api_key
+#    OPENAI_API_BASE=https://generativelanguage.googleapis.com
+#    LLM_MODEL=gemini-2.0-flash-exp
+#    VLM_MODEL=gemini-2.0-flash-exp
+
+# 3. 如果使用Anthropic Claude（通过OpenAI兼容接口）：
+#    OPENAI_API_KEY=your_claude_api_key
+#    OPENAI_API_BASE=https://api.anthropic.com
+#    LLM_MODEL=claude-3-5-sonnet-20241022
+#    VLM_MODEL=claude-3-5-sonnet-20241022
+
+# 4. 如果使用DeepSeek：
+#    OPENAI_API_KEY=your_deepseek_api_key
+#    OPENAI_API_BASE=https://api.deepseek.com
+#    LLM_MODEL=deepseek-chat
+#    VLM_MODEL=deepseek-chat 
