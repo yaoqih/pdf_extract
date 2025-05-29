@@ -1,7 +1,7 @@
 from fastapi import FastAPI, File, UploadFile, HTTPException, BackgroundTasks, Depends, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, StreamingResponse
 import os
 import uuid
 import aiofiles
@@ -9,6 +9,8 @@ import traceback
 import time
 from typing import List, Optional
 from datetime import datetime
+import pandas as pd
+from io import BytesIO
 
 from database import engine, SessionLocal, Base
 from models import PDFCase, ExtractionTemplate
@@ -65,7 +67,8 @@ app.add_middleware(
 # 静态文件服务
 os.makedirs("uploads", exist_ok=True)
 os.makedirs("static", exist_ok=True)
-app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/static", StaticFiles(directory="static"), name="static_files")
+app.mount("/user_uploads", StaticFiles(directory="uploads"), name="user_uploads")
 
 # 依赖注入：数据库会话
 def get_db():
@@ -118,7 +121,7 @@ async def upload_pdf(
         pdf_case = PDFCase(
             id=file_id,
             original_filename=file.filename,
-            file_path=file_path,
+            file_path=saved_filename,
             status="uploaded",
             created_at=datetime.utcnow()
         )
@@ -167,7 +170,7 @@ async def upload_pdf_with_config(
     pdf_case = PDFCase(
         id=file_id,
         original_filename=file.filename,
-        file_path=file_path,
+        file_path=saved_filename,
         status="uploaded",
         extraction_fields=[field.dict() for field in config.extraction_fields] if config and config.extraction_fields else None,
         custom_prompt=config.custom_prompt if config else None,
@@ -518,7 +521,91 @@ async def get_case_page_detail(case_id: str, page_num: int, db: SessionLocal = D
         "vlm_result": vlm_page
     }
 
+@app.post("/api/export-all-cases-excel")
+async def export_all_cases_excel(db: SessionLocal = Depends(get_db)):
+    """导出所有已完成案例的提取信息到Excel文件"""
+    api_logger.info("开始导出所有案例到Excel")
+    try:
+        cases = db.query(PDFCase).filter(PDFCase.status == "completed", PDFCase.extracted_info != None).order_by(PDFCase.created_at.desc()).all()
+        if not cases:
+            api_logger.warning("没有已完成的案例可供导出")
+            raise HTTPException(status_code=404, detail="没有已完成的案例可供导出")
 
+        data_to_export = []
+        # 收集所有出现过的字段名，作为Excel的列头
+        all_field_keys = set()
+        for case in cases:
+            if case.extracted_info:
+                all_field_keys.update(case.extracted_info.keys())
+        
+        # 确保核心字段在前，其他字段按字母排序
+        sorted_field_keys = sorted(list(all_field_keys), key=lambda x: (x not in ['original_filename', 'status'], x))
+        
+        # 准备Excel表头
+        headers = ['原始文件名', '状态'] + [key for key in sorted_field_keys if key not in ['original_filename', 'status']]
+
+
+        for case in cases:
+            row_data = {'原始文件名': case.original_filename, '状态': case.status}
+            if case.extracted_info:
+                for key in headers[2:]: # 从提取字段开始
+                     row_data[key] = case.extracted_info.get(key, None) # 使用 get 避免 KeyError
+            data_to_export.append(row_data)
+
+        df = pd.DataFrame(data_to_export, columns=headers)
+        
+        excel_file = BytesIO()
+        df.to_excel(excel_file, index=False, sheet_name="已提取信息汇总")
+        excel_file.seek(0)
+        
+        api_logger.info(f"成功准备 {len(cases)} 条案例数据到Excel")
+        
+        return StreamingResponse(
+            excel_file,
+            media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            headers={"Content-Disposition": f"attachment; filename=pdf_extracted_data_{datetime.now().strftime('%Y%m%d_%H%M%S')}.xlsx"}
+        )
+    except HTTPException:
+        raise
+    except Exception as e:
+        api_logger.error(f"导出Excel失败: {str(e)}")
+        api_logger.error(f"错误详情: {traceback.format_exc()}")
+        raise HTTPException(status_code=500, detail=f"导出Excel失败: {str(e)}")
+
+@app.delete("/api/clear-all-cases")
+async def clear_all_cases(db: SessionLocal = Depends(get_db)):
+    """清空所有PDF案例数据（包括文件和数据库记录）"""
+    api_logger.info("开始清空所有案例数据")
+    try:
+        cases_to_delete = db.query(PDFCase).all()
+        num_cases_deleted = len(cases_to_delete)
+
+        if not cases_to_delete:
+            api_logger.info("没有案例数据需要清空")
+            return {"message": "没有案例数据需要清空"}
+
+        for case in cases_to_delete:
+            # 删除物理文件
+            file_to_remove = os.path.join("uploads", case.file_path) # 假设 file_path 存的是文件名
+            if os.path.exists(file_to_remove):
+                try:
+                    os.remove(file_to_remove)
+                    api_logger.debug(f"已删除文件: {file_to_remove}")
+                except OSError as e:
+                    api_logger.error(f"删除文件失败 {file_to_remove}: {e.strerror}")
+            
+            # 从数据库删除记录
+            db.delete(case)
+        
+        db.commit()
+        api_logger.info(f"成功清空 {num_cases_deleted} 条案例数据")
+        return {"message": f"成功清空 {num_cases_deleted} 条案例数据"}
+        
+    except Exception as e:
+        db.rollback()
+        api_logger.error(f"清空所有案例数据失败: {str(e)}")
+        api_logger.error(f"错误详情: {traceback.format_exc()}")
+        raise HTTPException(status_code=500, detail=f"清空数据失败: {str(e)}")
 
 @app.get("/api/default-config")
 async def get_default_config():

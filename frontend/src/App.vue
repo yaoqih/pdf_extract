@@ -9,31 +9,41 @@
           </h1>
           <div class="header-actions">
             <el-button type="primary" @click="$router.push('/')">
-              <el-icon><House /></el-icon>
-              首页
+              <el-icon><OfficeBuilding /></el-icon>
+              主工作台
+            </el-button>
+            <el-button type="default" @click="$router.push('/config')">
+              <el-icon><Tools /></el-icon>
+              字段配置
             </el-button>
           </div>
         </div>
       </el-header>
       
       <el-main class="main-content">
-        <router-view />
+        <router-view v-slot="{ Component }">
+          <keep-alive>
+            <component :is="Component" />
+          </keep-alive>
+        </router-view>
       </el-main>
       
       <el-footer class="footer">
-        <p>&copy; 2025 PDF信息提取系统 - 律师案件材料处理助手</p>
+        <p>&copy; {{ new Date().getFullYear() }} PDF信息提取系统 - 杨律案件材料处理助手</p>
       </el-footer>
     </el-container>
   </div>
 </template>
 
 <script setup>
-import { Document, House } from '@element-plus/icons-vue'
+import { Document, OfficeBuilding, Tools } from '@element-plus/icons-vue'
 </script>
 
 <style scoped>
 .layout-container {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -41,21 +51,22 @@ import { Document, House } from '@element-plus/icons-vue'
   color: white;
   padding: 0;
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
 }
 
 .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100%;
+  height: 60px;
   padding: 0 20px;
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
 .title {
   margin: 0;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -67,22 +78,27 @@ import { Document, House } from '@element-plus/icons-vue'
   gap: 10px;
 }
 
+.header-actions .el-button .el-icon {
+  margin-right: 5px;
+}
+
 .main-content {
-  background-color: #f5f7fa;
-  min-height: calc(100vh - 120px);
-  padding: 20px;
+  background-color: #f0f2f5;
+  flex-grow: 1;
+  padding: 0;
 }
 
 .footer {
-  background-color: #2c3e50;
-  color: white;
+  background-color: #34495e;
+  color: #ecf0f1;
   text-align: center;
-  padding: 20px;
+  padding: 15px 20px;
+  flex-shrink: 0;
 }
 
 .footer p {
   margin: 0;
-  font-size: 14px;
+  font-size: 13px;
 }
 </style>
 
@@ -93,13 +109,27 @@ import { Document, House } from '@element-plus/icons-vue'
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
-  background-color: #f5f7fa;
+  background-color: #f0f2f5;
 }
 
 #app {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  gap: 8px;
+}
+.card-header .el-icon {
+  font-size: 16px;
 }
 </style> 

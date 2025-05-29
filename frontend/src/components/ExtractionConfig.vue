@@ -7,14 +7,6 @@
           <span>提取配置</span>
           <div class="header-actions">
             <el-button 
-              type="primary" 
-              size="small" 
-              @click="loadTemplate"
-              :disabled="!selectedTemplate"
-            >
-              加载模板
-            </el-button>
-            <el-button 
               type="success" 
               size="small" 
               @click="saveAsTemplate"
@@ -32,6 +24,7 @@
           placeholder="选择已有模板或使用默认配置"
           clearable
           style="width: 100%"
+          @change="handleTemplateSelectionChange"
         >
           <el-option
             v-for="template in templates"
@@ -263,21 +256,46 @@ const loadTemplates = async () => {
   }
 }
 
-// 加载选中的模板
-const loadTemplate = async () => {
-  if (!selectedTemplate.value) return
+// 修改: loadTemplate 不再需要检查 selectedTemplate.value, 因为它由 watch 或 change 事件触发
+const loadTemplateById = async (templateId) => {
+  if (!templateId) { // 如果传入的id为空 (例如清空选择时)
+    // 可以选择重置为默认配置或清空当前配置
+    // 这里我们选择清空，如果需要重置为系统默认，可以调用 loadDefaultConfig()
+    extractionFields.value = [];
+    customPrompt.value = '';
+    updateModelValue();
+    // ElMessage.info('已清空配置'); // 可选提示
+    return;
+  }
   
   try {
-    const template = await pdfApi.getTemplate(selectedTemplate.value)
+    const template = await pdfApi.getTemplate(templateId)
     extractionFields.value = template.extraction_fields || []
     customPrompt.value = template.custom_prompt || ''
     updateModelValue()
-    ElMessage.success('模板加载成功')
+    ElMessage.success(`模板 "${template.name}" 加载成功`)
   } catch (error) {
     ElMessage.error('加载模板失败')
     console.error(error)
   }
 }
+
+// 新增: el-select的change事件处理器
+const handleTemplateSelectionChange = (templateId) => {
+  if (templateId) {
+    loadTemplateById(templateId);
+  } else {
+    // 当选择被清空时，selectedTemplate 会是 null 或 undefined
+    // 清空当前配置或加载一个"空"状态
+    extractionFields.value = props.modelValue.extraction_fields?.length ? [...props.modelValue.extraction_fields] : [defaultField()];
+    customPrompt.value = props.modelValue.custom_prompt || '';
+    // 或者，如果希望清空而不是恢复初始/父级状态:
+    // extractionFields.value = [defaultField()];
+    // customPrompt.value = '';
+    updateModelValue();
+    ElMessage.info('已取消模板选择，恢复为当前配置');
+  }
+};
 
 // 添加字段
 const addField = () => {
@@ -351,10 +369,14 @@ watch([extractionFields, customPrompt], () => {
 // 监听props变化
 watch(() => props.modelValue, (newValue) => {
   if (newValue) {
-    extractionFields.value = newValue.extraction_fields || []
-    customPrompt.value = newValue.custom_prompt || ''
+    // 当 selectedTemplate 为空时，我们希望组件反映父组件传入的 modelValue
+    // 只有当用户没有主动选择模板时，才同步 modelValue
+    if (!selectedTemplate.value) { 
+      extractionFields.value = newValue.extraction_fields?.length ? [...newValue.extraction_fields] : [defaultField()];
+      customPrompt.value = newValue.custom_prompt || '';
+    }
   }
-}, { immediate: true })
+}, { immediate: true, deep: true })
 
 // 组件挂载时加载数据
 onMounted(() => {

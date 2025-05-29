@@ -1,0 +1,443 @@
+2025-05-29 01:08:44 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:08:44 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:08:44 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:02 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:02 - pdf_processor - ERROR - pdf_processor.py:245 - 第2页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:02 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:02 - pdf_processor - ERROR - pdf_processor.py:245 - 第3页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:02 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:02 - pdf_processor - ERROR - pdf_processor.py:245 - 第1页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:05 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:05 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:05 - pdf_processor - ERROR - pdf_processor.py:245 - 第3页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:05 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:05 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:05 - pdf_processor - ERROR - pdf_processor.py:245 - 第1页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:05 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:05 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:05 - pdf_processor - ERROR - pdf_processor.py:245 - 第3页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:05 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:05 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:05 - pdf_processor - ERROR - pdf_processor.py:245 - 第1页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:06 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:06 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:06 - pdf_processor - ERROR - pdf_processor.py:245 - 第2页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:06 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:06 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:06 - pdf_processor - ERROR - pdf_processor.py:245 - 第2页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:06 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:06 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:06 - pdf_processor - ERROR - pdf_processor.py:245 - 第1页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:07 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:07 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:07 - pdf_processor - ERROR - pdf_processor.py:245 - 第3页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:07 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:07 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:07 - pdf_processor - ERROR - pdf_processor.py:245 - 第1页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:07 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:07 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:07 - pdf_processor - ERROR - pdf_processor.py:245 - 第2页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:07 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:07 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:07 - pdf_processor - ERROR - pdf_processor.py:245 - 第2页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:07 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:07 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:07 - pdf_processor - ERROR - pdf_processor.py:245 - 第3页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:08 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:08 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:08 - pdf_processor - ERROR - pdf_processor.py:245 - 第3页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:08 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:08 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:08 - pdf_processor - ERROR - pdf_processor.py:245 - 第2页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:12 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:12 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:09:12 - pdf_processor - ERROR - pdf_processor.py:245 - 第1页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:26:01 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:26:01 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:26:01 - pdf_processor - ERROR - pdf_processor.py:245 - 第1页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:26:01 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:26:01 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:26:01 - pdf_processor - ERROR - pdf_processor.py:245 - 第3页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:26:02 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:26:02 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:26:02 - pdf_processor - ERROR - pdf_processor.py:245 - 第2页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:32:11 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:32:11 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:32:11 - pdf_processor - ERROR - pdf_processor.py:245 - 第3页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:32:11 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:32:11 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:32:11 - pdf_processor - ERROR - pdf_processor.py:245 - 第2页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:32:11 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:32:11 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:32:11 - pdf_processor - ERROR - pdf_processor.py:245 - 第1页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:35:22 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:35:22 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:35:22 - pdf_processor - ERROR - pdf_processor.py:245 - 第2页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:35:22 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:35:22 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:35:22 - pdf_processor - ERROR - pdf_processor.py:245 - 第1页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:35:23 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:35:23 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 01:35:23 - pdf_processor - ERROR - pdf_processor.py:245 - 第3页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 10:06:18 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 10:06:18 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 10:06:18 - pdf_processor - ERROR - pdf_processor.py:245 - 第2页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 10:06:18 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 10:06:18 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 10:06:18 - pdf_processor - ERROR - pdf_processor.py:245 - 第3页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 10:06:19 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 10:06:19 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 10:06:19 - pdf_processor - ERROR - pdf_processor.py:245 - 第1页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 10:17:29 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 10:17:29 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 10:17:29 - pdf_processor - ERROR - pdf_processor.py:245 - 第1页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 10:17:30 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 10:17:30 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 10:17:30 - pdf_processor - ERROR - pdf_processor.py:245 - 第2页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 10:17:30 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 10:17:30 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 10:17:30 - pdf_processor - ERROR - pdf_processor.py:245 - 第1页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 10:17:30 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 10:17:30 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 10:17:30 - pdf_processor - ERROR - pdf_processor.py:245 - 第3页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 10:17:30 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 10:17:30 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 10:17:30 - pdf_processor - ERROR - pdf_processor.py:245 - 第2页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 10:17:31 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 10:17:31 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 10:17:31 - pdf_processor - ERROR - pdf_processor.py:245 - 第3页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 10:21:34 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 10:21:34 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 10:21:34 - pdf_processor - ERROR - pdf_processor.py:245 - 第3页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 10:21:34 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 10:21:34 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 10:21:34 - pdf_processor - ERROR - pdf_processor.py:245 - 第2页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 10:21:35 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 10:21:35 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 10:21:35 - pdf_processor - ERROR - pdf_processor.py:245 - 第1页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 11:24:26 - api - ERROR - main.py:52 - 请求异常: GET http://localhost:8000/api/cases - 耗时: 0.015s - 错误: You must set the config attribute `from_attributes=True` to use from_orm
+2025-05-29 11:24:26 - api - ERROR - main.py:53 - 异常详情: Traceback (most recent call last):
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\middleware\base.py", line 157, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\anyio\streams\memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\13756\OneDrive - integrate collaborative models\文档\pdf_extract\backend\main.py", line 43, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\middleware\base.py", line 163, in call_next
+    raise app_exc
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\middleware\base.py", line 149, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\13756\OneDrive - integrate collaborative models\文档\pdf_extract\backend\main.py", line 305, in get_cases
+    return [PDFCaseResponse.from_orm(case) for case in cases]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\13756\OneDrive - integrate collaborative models\文档\pdf_extract\backend\main.py", line 305, in <listcomp>
+    return [PDFCaseResponse.from_orm(case) for case in cases]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\pydantic\main.py", line 1324, in from_orm
+    raise PydanticUserError(
+pydantic.errors.PydanticUserError: You must set the config attribute `from_attributes=True` to use from_orm
+
+2025-05-29 11:24:28 - api - ERROR - main.py:52 - 请求异常: GET http://localhost:8000/api/cases - 耗时: 0.007s - 错误: You must set the config attribute `from_attributes=True` to use from_orm
+2025-05-29 11:24:28 - api - ERROR - main.py:53 - 异常详情: Traceback (most recent call last):
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\middleware\base.py", line 157, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\anyio\streams\memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\13756\OneDrive - integrate collaborative models\文档\pdf_extract\backend\main.py", line 43, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\middleware\base.py", line 163, in call_next
+    raise app_exc
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\middleware\base.py", line 149, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\13756\OneDrive - integrate collaborative models\文档\pdf_extract\backend\main.py", line 305, in get_cases
+    return [PDFCaseResponse.from_orm(case) for case in cases]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\13756\OneDrive - integrate collaborative models\文档\pdf_extract\backend\main.py", line 305, in <listcomp>
+    return [PDFCaseResponse.from_orm(case) for case in cases]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\pydantic\main.py", line 1324, in from_orm
+    raise PydanticUserError(
+pydantic.errors.PydanticUserError: You must set the config attribute `from_attributes=True` to use from_orm
+
+2025-05-29 11:25:33 - api - ERROR - main.py:52 - 请求异常: GET http://localhost:8000/api/cases - 耗时: 0.019s - 错误: You must set the config attribute `from_attributes=True` to use from_orm
+2025-05-29 11:25:33 - api - ERROR - main.py:53 - 异常详情: Traceback (most recent call last):
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\middleware\base.py", line 157, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\anyio\streams\memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\13756\OneDrive - integrate collaborative models\文档\pdf_extract\backend\main.py", line 43, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\middleware\base.py", line 163, in call_next
+    raise app_exc
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\middleware\base.py", line 149, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\13756\OneDrive - integrate collaborative models\文档\pdf_extract\backend\main.py", line 305, in get_cases
+    return [PDFCaseResponse.from_orm(case) for case in cases]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\13756\OneDrive - integrate collaborative models\文档\pdf_extract\backend\main.py", line 305, in <listcomp>
+    return [PDFCaseResponse.from_orm(case) for case in cases]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\pydantic\main.py", line 1324, in from_orm
+    raise PydanticUserError(
+pydantic.errors.PydanticUserError: You must set the config attribute `from_attributes=True` to use from_orm
+
+2025-05-29 11:25:36 - api - ERROR - main.py:52 - 请求异常: GET http://localhost:8000/api/cases - 耗时: 0.009s - 错误: You must set the config attribute `from_attributes=True` to use from_orm
+2025-05-29 11:25:36 - api - ERROR - main.py:53 - 异常详情: Traceback (most recent call last):
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\middleware\base.py", line 157, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\anyio\streams\memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\13756\OneDrive - integrate collaborative models\文档\pdf_extract\backend\main.py", line 43, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\middleware\base.py", line 163, in call_next
+    raise app_exc
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\middleware\base.py", line 149, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\13756\OneDrive - integrate collaborative models\文档\pdf_extract\backend\main.py", line 305, in get_cases
+    return [PDFCaseResponse.from_orm(case) for case in cases]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\13756\OneDrive - integrate collaborative models\文档\pdf_extract\backend\main.py", line 305, in <listcomp>
+    return [PDFCaseResponse.from_orm(case) for case in cases]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\pydantic\main.py", line 1324, in from_orm
+    raise PydanticUserError(
+pydantic.errors.PydanticUserError: You must set the config attribute `from_attributes=True` to use from_orm
+
+2025-05-29 11:47:02 - api - ERROR - main.py:52 - 请求异常: GET http://localhost:8000/api/cases - 耗时: 30.184s - 错误: QueuePool limit of size 5 overflow 10 reached, connection timed out, timeout 30.00 (Background on this error at: https://sqlalche.me/e/20/3o7r)
+2025-05-29 11:47:02 - api - ERROR - main.py:53 - 异常详情: Traceback (most recent call last):
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\middleware\base.py", line 157, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\anyio\streams\memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\13756\OneDrive - integrate collaborative models\文档\pdf_extract\backend\main.py", line 43, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\middleware\base.py", line 163, in call_next
+    raise app_exc
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\middleware\base.py", line 149, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\13756\anaconda3\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\13756\OneDrive - integrate collaborative models\文档\pdf_extract\backend\main.py", line 304, in get_cases
+    cases = db.query(PDFCase).order_by(PDFCase.created_at.desc()).all()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\sqlalchemy\orm\query.py", line 2699, in all
+    return self._iter().all()  # type: ignore
+           ^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\sqlalchemy\orm\query.py", line 2853, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\sqlalchemy\orm\session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\sqlalchemy\orm\session.py", line 2241, in _execute_internal
+    conn = self._connection_for_bind(bind)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\sqlalchemy\orm\session.py", line 2110, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in _connection_for_bind
+  File "C:\Users\13756\anaconda3\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\sqlalchemy\orm\session.py", line 1189, in _connection_for_bind
+    conn = bind.connect()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\sqlalchemy\engine\base.py", line 3274, in connect
+    return self._connection_cls(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\sqlalchemy\engine\base.py", line 146, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\sqlalchemy\engine\base.py", line 3298, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\sqlalchemy\pool\base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\sqlalchemy\pool\base.py", line 1263, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "C:\Users\13756\anaconda3\Lib\site-packages\sqlalchemy\pool\impl.py", line 168, in _do_get
+    raise exc.TimeoutError(
+sqlalchemy.exc.TimeoutError: QueuePool limit of size 5 overflow 10 reached, connection timed out, timeout 30.00 (Background on this error at: https://sqlalche.me/e/20/3o7r)
+
+2025-05-29 11:47:06 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 11:47:06 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 11:47:06 - pdf_processor - ERROR - pdf_processor.py:245 - 第2页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 11:47:06 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 11:47:06 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 11:47:06 - pdf_processor - ERROR - pdf_processor.py:245 - 第1页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 11:47:06 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 11:47:06 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 11:47:06 - pdf_processor - ERROR - pdf_processor.py:245 - 第3页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}

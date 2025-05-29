@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { ElMessage } from 'element-plus'
 
 // 创建axios实例
 const api = axios.create({
@@ -22,10 +23,28 @@ api.interceptors.request.use(
 // 响应拦截器
 api.interceptors.response.use(
   response => {
-    return response.data
+    // If the request was for a blob (like a file download),
+    // return the full response object so headers can be accessed.
+    if (response.config && response.config.responseType === 'blob') {
+      return response; // Return the full response object
+    }
+    return response.data; // Otherwise, return only the data
   },
   error => {
     console.error('API Error:', error)
+    // 更友好的用户提示
+    let message = '请求失败，请稍后重试。'
+    if (error.response) {
+      // 请求已发出，但服务器响应状态码不在 2xx 范围内
+      message = `请求错误 ${error.response.status}: ${error.response.data.detail || error.response.statusText || '服务器内部错误'}`
+    } else if (error.request) {
+      // 请求已发出，但没有收到响应
+      message = '网络请求超时或服务器无响应，请检查网络连接。'
+    } else {
+      // 在设置请求时触发了一个错误
+      message = `请求设置错误: ${error.message}`
+    }
+    ElMessage.error(message)
     return Promise.reject(error)
   }
 )
@@ -33,18 +52,23 @@ api.interceptors.response.use(
 // API方法
 export const pdfApi = {
   // 上传PDF文件
-  uploadPDF(file) {
+  uploadPDF(file, onUploadProgressCallback) {
     const formData = new FormData()
     formData.append('file', file)
     return api.post('/upload', formData, {
       headers: {
         'Content-Type': 'multipart/form-data'
+      },
+      onUploadProgress: (progressEvent) => {
+        if (onUploadProgressCallback && typeof onUploadProgressCallback === 'function') {
+          onUploadProgressCallback(progressEvent);
+        }
       }
     })
   },
 
   // 上传PDF文件并使用自定义配置
-  uploadPDFWithConfig(file, config) {
+  uploadPDFWithConfig(file, config, onUploadProgressCallback) {
     const formData = new FormData()
     formData.append('file', file)
     if (config) {
@@ -53,6 +77,11 @@ export const pdfApi = {
     return api.post('/upload-with-config', formData, {
       headers: {
         'Content-Type': 'multipart/form-data'
+      },
+      onUploadProgress: (progressEvent) => {
+        if (onUploadProgressCallback && typeof onUploadProgressCallback === 'function') {
+          onUploadProgressCallback(progressEvent);
+        }
       }
     })
   },
@@ -116,6 +145,18 @@ export const pdfApi = {
   // 获取默认配置
   getDefaultConfig() {
     return api.get('/default-config')
+  },
+
+  // 新增：导出所有案例到Excel
+  exportAllCasesExcel() {
+    return api.post('/export-all-cases-excel', {}, {
+      responseType: 'blob', // 重要：确保响应类型为blob以下载文件
+    });
+  },
+
+  // 新增：清空所有案例
+  clearAllCases() {
+    return api.delete('/clear-all-cases');
   }
 }
 
