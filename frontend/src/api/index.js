@@ -1,9 +1,15 @@
 import axios from 'axios'
 import { ElMessage } from 'element-plus'
 
+// 动态获取当前网页的主机地址
+const getBaseURL = () => {
+  const { protocol, hostname } = window.location
+  return `${protocol}//${hostname}:8000/api`
+}
+
 // 创建axios实例
 const api = axios.create({
-  baseURL: 'http://localhost:8000/api',
+  baseURL: getBaseURL(),
   timeout: 60000,
   headers: {
     'Content-Type': 'application/json'
