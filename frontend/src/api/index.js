@@ -144,7 +144,11 @@ export const pdfApi = {
 
   // 获取默认配置
   getDefaultConfig() {
-    return api.get('/default-config')
+    return api.get('/default-config', {
+      params: {
+        _: new Date().getTime() // 添加时间戳以防止缓存
+      }
+    });
   },
 
   // 新增：导出所有案例到Excel

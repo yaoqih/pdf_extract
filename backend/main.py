@@ -100,6 +100,21 @@ async def upload_pdf(
             api_logger.warning(f"文件类型不支持: {file.filename}")
             raise HTTPException(status_code=400, detail="只支持PDF文件")
         
+        # --- 关键修复：上传时获取并关联当前默认模板 ---
+        default_template = db.query(ExtractionTemplate).filter(
+            (ExtractionTemplate.is_default == 'true') | (ExtractionTemplate.is_default == True)
+        ).first()
+
+        extraction_fields_to_apply = None
+        custom_prompt_to_apply = None
+        if default_template:
+            extraction_fields_to_apply = default_template.extraction_fields
+            custom_prompt_to_apply = default_template.custom_prompt
+            api_logger.info(f"上传时关联默认模板: {default_template.name}")
+        else:
+            api_logger.warning("上传时未找到默认模板，将不关联任何提取配置")
+        # --- 修复结束 ---
+
         # 生成唯一文件名
         file_id = str(uuid.uuid4())
         file_extension = os.path.splitext(file.filename)[1]
@@ -123,7 +138,9 @@ async def upload_pdf(
             original_filename=file.filename,
             file_path=saved_filename,
             status="uploaded",
-            created_at=datetime.utcnow()
+            created_at=datetime.utcnow(),
+            extraction_fields=extraction_fields_to_apply, # 关联字段
+            custom_prompt=custom_prompt_to_apply # 关联提示词
         )
         db.add(pdf_case)
         db.commit()
@@ -351,15 +368,13 @@ async def reprocess_case(
         raise HTTPException(status_code=404, detail="案例未找到")
     
     # 更新配置
-    if config:
-        if config.extraction_fields:
-            case.extraction_fields = [field.dict() for field in config.extraction_fields]
-        if config.custom_prompt:
-            case.custom_prompt = config.custom_prompt
-        db.commit()
+    if config and config.extraction_fields is not None:
+        case.extraction_fields = [field.model_dump() for field in config.extraction_fields]
+    if config and config.custom_prompt is not None:
+        case.custom_prompt = config.custom_prompt
     
     # 重新处理
-    background_tasks.add_task(process_pdf_background, case_id, case.file_path)
+    background_tasks.add_task(process_pdf_background, case_id, os.path.join("uploads", case.file_path))
     
     return {"message": "开始重新处理"}
 
@@ -440,26 +455,40 @@ async def update_template(
     db: SessionLocal = Depends(get_db)
 ):
     """更新提取模板"""
-    template = db.query(ExtractionTemplate).filter(ExtractionTemplate.id == template_id).first()
-    if not template:
-        raise HTTPException(status_code=404, detail="模板未找到")
+    db_template = db.query(ExtractionTemplate).filter(ExtractionTemplate.id == template_id).first()
+    if not db_template:
+        raise HTTPException(status_code=404, detail="Template not found")
+
+    # 使用 model_dump 获取一个字典，这是推荐的 Pydantic v2 方法
+    update_data = template_data.model_dump(exclude_unset=True)
+
+    # 显式地逐个更新字段，以获得最强的可靠性
+    if "name" in update_data:
+        db_template.name = update_data["name"]
+    if "description" in update_data:
+        db_template.description = update_data["description"]
     
-    if template_data.name is not None:
-        template.name = template_data.name
-    if template_data.description is not None:
-        template.description = template_data.description
-    if template_data.extraction_fields is not None:
-        template.extraction_fields = [field.dict() for field in template_data.extraction_fields]
-    if template_data.custom_prompt is not None:
-        template.custom_prompt = template_data.custom_prompt
-    if template_data.is_default is not None:
-        template.is_default = template_data.is_default
+    # 关键修复：显式地处理 extraction_fields 的覆盖
+    # 这确保了即使列表变短（删除了字段），数据库也会同步更新
+    if "extraction_fields" in update_data:
+        db_template.extraction_fields = update_data["extraction_fields"]
+        
+    if "custom_prompt" in update_data:
+        db_template.custom_prompt = update_data["custom_prompt"]
+
+    if "is_default" in update_data:
+        # 稳健地处理来自前端的布尔值或字符串
+        is_default_val = update_data["is_default"]
+        if isinstance(is_default_val, bool):
+            db_template.is_default = 'true' if is_default_val else 'false'
+        else:
+            db_template.is_default = str(is_default_val).lower()
     
-    template.updated_at = datetime.utcnow()
+    db_template.updated_at = datetime.utcnow()
+
     db.commit()
-    db.refresh(template)
-    
-    return ExtractionTemplateResponse.from_orm(template)
+    db.refresh(db_template)
+    return db_template
 
 @app.delete("/api/templates/{template_id}")
 async def delete_template(template_id: str, db: SessionLocal = Depends(get_db)):
@@ -608,11 +637,29 @@ async def clear_all_cases(db: SessionLocal = Depends(get_db)):
         raise HTTPException(status_code=500, detail=f"清空数据失败: {str(e)}")
 
 @app.get("/api/default-config")
-async def get_default_config():
+async def get_default_config(db: SessionLocal = Depends(get_db)):
     """获取默认提取配置"""
+    # 从数据库中查找被标记为默认的模板
+    default_template = db.query(ExtractionTemplate).filter(
+        (ExtractionTemplate.is_default == 'true') | (ExtractionTemplate.is_default == True)
+    ).first()
+    
+    if default_template:
+        return default_template
+
+    # 如果没有找到默认模板，尝试返回第一个模板作为后备
+    first_template = db.query(ExtractionTemplate).order_by(ExtractionTemplate.created_at).first()
+    if first_template:
+        return first_template
+
+    # 如果数据库中没有任何模板，返回一个基础的、硬编码的配置
+    logger.warning("No default template found in the database, returning hardcoded fallback.")
     return {
-        "extraction_fields": ai_extractor.get_default_extraction_fields(),
-        "prompt_template": ai_extractor.get_default_prompt_template()
+        "extraction_fields": [
+            {"key": "name", "label": "姓名", "type": "text", "required": True, "placeholder": "请输入姓名"},
+            {"key": "id_number", "label": "身份证号", "type": "text", "required": False, "placeholder": "请输入身份证号"}
+        ],
+        "custom_prompt": ""
     }
 
 if __name__ == "__main__":

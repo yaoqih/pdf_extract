@@ -479,36 +479,40 @@ const autoSave = () => {
 // Display fields for editor and table
 const defaultExtractionFields = ref([]); // To be fetched or defined
 const displayFields = computed(() => {
+  // 恢复正确逻辑：优先使用案例自身的字段配置
   if (selectedCase.value?.extraction_fields?.length > 0) {
     return selectedCase.value.extraction_fields;
   }
+  // 回退到全局默认配置
   return defaultExtractionFields.value;
 });
 
 const tableDisplayFields = computed(() => {
-  // For the aggregated table, we might want a consistent set of columns.
-  // This could be the default fields or a super-set if cases have varied fields.
-  // For simplicity, using default fields for now.
-  if (defaultExtractionFields.value.length > 0) return defaultExtractionFields.value;
-  
-  // If no default, try to derive from the first case with fields
-  const firstCaseWithFields = cases.value.find(c => c.extraction_fields && c.extraction_fields.length > 0);
-  if (firstCaseWithFields) return firstCaseWithFields.extraction_fields;
-  
-  // Fallback for cases where extracted_info exists but no explicit fields config (old cases)
-  if (cases.value.length > 0 && cases.value[0].extracted_info) {
-      return Object.keys(cases.value[0].extracted_info).map(key => ({ key, label: key, type: 'text' }));
-  }
-  return [];
+  // The table should also always reflect the current default configuration for consistency.
+  return defaultExtractionFields.value;
 });
 
 
 const loadDefaultConfig = async () => {
   try {
     const config = await pdfApi.getDefaultConfig();
-    if (config.extraction_fields) {
+    if (config && config.extraction_fields) {
       defaultExtractionFields.value = config.extraction_fields;
+
+      // --- 关键修复：优化数据清理逻辑 ---
+      // 仅当当前案例没有自己的字段配置（即依赖于默认模板）时，才进行数据清理
+      const isCaseUsingDefault = !selectedCase.value || !selectedCase.value.extraction_fields || selectedCase.value.extraction_fields.length === 0;
+
+      if (isCaseUsingDefault && editableExtractedInfo.value) {
+        const newFieldKeys = new Set(config.extraction_fields.map(f => f.key));
+        for (const key in editableExtractedInfo.value) {
+          if (!newFieldKeys.has(key)) {
+            delete editableExtractedInfo.value[key];
+          }
+        }
+      }
     }
+    ElMessage.success('已重新开始自动刷新，并同步了最新模板配置。');
   } catch (error) {
     console.error("Failed to load default extraction config:", error);
     // Fallback to a very basic set or leave empty
@@ -516,6 +520,7 @@ const loadDefaultConfig = async () => {
         { key: "name", label: "姓名", type: "text" },
         { key: "id_number", label: "身份证号", type: "text" },
     ];
+    ElMessage.warning('无法加载默认模板配置，已使用备用字段。');
   }
 };
 
@@ -862,12 +867,19 @@ const stopPolling = () => {
 };
 
 const manualRefresh = async () => {
+  await loadDefaultConfig(); // 同步模板
   await loadCases();
   if (!pollingInterval) {
     pollingFailureCount = 0;
     startPolling();
-    ElMessage.success('已重新开始自动刷新');
+    ElMessage.success('已重新开始自动刷新，并同步了最新模板配置。');
+  } else {
+    ElMessage.success('列表和表格列已刷新为最新配置。');
   }
+};
+
+const doRefresh = () => {
+  manualRefresh();
 };
 
 onMounted(async () => {
@@ -878,11 +890,13 @@ onMounted(async () => {
     // Optionally auto-select first case on load
     selectedCaseId.value = cases.value[0].id;
   }
+  document.addEventListener('refresh-workspace', doRefresh);
 });
 
 import { onBeforeUnmount } from 'vue';
 onBeforeUnmount(() => {
   stopPolling();
+  document.removeEventListener('refresh-workspace', doRefresh);
 });
 
 </script>

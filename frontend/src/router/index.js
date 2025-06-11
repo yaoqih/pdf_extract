@@ -30,4 +30,13 @@ const router = createRouter({
   routes
 })
 
+router.afterEach((to, from) => {
+  // 当从任何页面导航到主工作台时，发送一个事件
+  if (to.name === 'MainWorkspace') {
+    // 使用 document dispatchEvent 来创建一个简单的全局事件总线
+    // 确保在 MainWorkspace 组件的 onMounted 中监听此事件
+    document.dispatchEvent(new CustomEvent('refresh-workspace'));
+  }
+});
+
 export default router 

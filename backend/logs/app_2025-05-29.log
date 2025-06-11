@@ -2368,3 +2368,35 @@ sqlalchemy.exc.TimeoutError: QueuePool limit of size 5 overflow 10 reached, conn
 2025-05-29 11:57:09 - api - INFO - main.py:49 - 请求完成: GET http://localhost:8000/api/default-config - 状态码: 200 - 耗时: 0.003s
 2025-05-29 11:57:09 - api - INFO - main.py:41 - 请求开始: GET http://localhost:8000/api/cases
 2025-05-29 11:57:09 - api - INFO - main.py:49 - 请求完成: GET http://localhost:8000/api/cases - 状态码: 200 - 耗时: 0.008s
+2025-05-29 11:57:15 - pdf_processor - INFO - pdf_processor.py:24 - 初始化PDF处理器
+2025-05-29 11:57:15 - pdf_processor - INFO - pdf_processor.py:44 - 百度OCR API密钥已配置
+2025-05-29 11:57:15 - pdf_processor - INFO - pdf_processor.py:49 - VLM API密钥已配置，Base URL: https://api.ablai.top/v1, 模型: gemini-2.5-flash-preview-05-20
+2025-05-29 11:57:15 - ai_extractor - INFO - ai_extractor.py:19 - 初始化AI信息提取器
+2025-05-29 11:57:15 - ai_extractor - INFO - ai_extractor.py:32 - API密钥已配置。Base URL: https://api.ablai.top/v1
+2025-05-29 11:57:15 - ai_extractor - INFO - ai_extractor.py:39 - OpenAI异步客户端已成功初始化。
+2025-05-29 11:57:15 - ai_extractor - INFO - ai_extractor.py:44 - LLM模型配置: gemini-2.5-flash-preview-05-20
+2025-05-29 11:57:15 - ai_extractor - INFO - ai_extractor.py:45 - VLM模型配置: gemini-2.5-flash-preview-05-20
+2025-05-29 11:57:15 - api - INFO - main.py:41 - 请求开始: GET http://localhost:8000/user_uploads/885cfd27-e4f5-4221-a231-960159d15044.pdf
+2025-05-29 11:57:15 - api - INFO - main.py:41 - 请求开始: GET http://localhost:8000/api/default-config
+2025-05-29 11:57:15 - api - INFO - main.py:49 - 请求完成: GET http://localhost:8000/api/default-config - 状态码: 200 - 耗时: 0.003s
+2025-05-29 11:57:15 - api - INFO - main.py:49 - 请求完成: GET http://localhost:8000/user_uploads/885cfd27-e4f5-4221-a231-960159d15044.pdf - 状态码: 304 - 耗时: 0.265s
+2025-05-29 11:57:15 - api - INFO - main.py:41 - 请求开始: GET http://localhost:8000/api/cases
+2025-05-29 11:57:15 - api - INFO - main.py:49 - 请求完成: GET http://localhost:8000/api/cases - 状态码: 200 - 耗时: 0.011s
+2025-05-29 11:57:15 - api - INFO - main.py:41 - 请求开始: GET http://localhost:8000/user_uploads/885cfd27-e4f5-4221-a231-960159d15044.pdf
+2025-05-29 11:57:15 - api - INFO - main.py:49 - 请求完成: GET http://localhost:8000/user_uploads/885cfd27-e4f5-4221-a231-960159d15044.pdf - 状态码: 200 - 耗时: 0.003s
+2025-05-29 11:57:25 - api - INFO - main.py:41 - 请求开始: GET http://localhost:8000/api/default-config
+2025-05-29 11:57:25 - api - INFO - main.py:49 - 请求完成: GET http://localhost:8000/api/default-config - 状态码: 200 - 耗时: 0.002s
+2025-05-29 11:57:25 - api - INFO - main.py:41 - 请求开始: GET http://localhost:8000/api/cases
+2025-05-29 11:57:25 - api - INFO - main.py:49 - 请求完成: GET http://localhost:8000/api/cases - 状态码: 200 - 耗时: 0.009s
+2025-05-29 11:57:28 - api - INFO - main.py:41 - 请求开始: GET http://localhost:8000/api/default-config
+2025-05-29 11:57:28 - api - INFO - main.py:49 - 请求完成: GET http://localhost:8000/api/default-config - 状态码: 200 - 耗时: 0.002s
+2025-05-29 11:57:28 - api - INFO - main.py:41 - 请求开始: GET http://localhost:8000/api/cases
+2025-05-29 11:57:28 - api - INFO - main.py:49 - 请求完成: GET http://localhost:8000/api/cases - 状态码: 200 - 耗时: 0.008s
+2025-05-29 11:57:29 - api - INFO - main.py:41 - 请求开始: GET http://localhost:8000/api/default-config
+2025-05-29 11:57:29 - api - INFO - main.py:49 - 请求完成: GET http://localhost:8000/api/default-config - 状态码: 200 - 耗时: 0.002s
+2025-05-29 11:57:29 - api - INFO - main.py:41 - 请求开始: GET http://localhost:8000/api/cases
+2025-05-29 11:57:29 - api - INFO - main.py:49 - 请求完成: GET http://localhost:8000/api/cases - 状态码: 200 - 耗时: 0.009s
+2025-05-29 11:57:40 - api - INFO - main.py:41 - 请求开始: POST http://localhost:8000/api/export-all-cases-excel
+2025-05-29 11:57:40 - api - INFO - main.py:527 - 开始导出所有案例到Excel
+2025-05-29 11:57:41 - api - INFO - main.py:561 - 成功准备 6 条案例数据到Excel
+2025-05-29 11:57:41 - api - INFO - main.py:49 - 请求完成: POST http://localhost:8000/api/export-all-cases-excel - 状态码: 200 - 耗时: 0.610s
