@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2025-05-29 01:06:36 - pdf_processor - INFO - pdf_processor.py:24 - 初始化PDF处理器
 2025-05-29 01:06:36 - pdf_processor - INFO - pdf_processor.py:44 - 百度OCR API密钥已配置
 2025-05-29 01:06:36 - pdf_processor - INFO - pdf_processor.py:49 - VLM API密钥已配置，Base URL: https://api.ablai.top/v1, 模型: gemini-2.5-flash-preview-05-20
@@ -2400,3 +2401,184 @@ sqlalchemy.exc.TimeoutError: QueuePool limit of size 5 overflow 10 reached, conn
 2025-05-29 11:57:40 - api - INFO - main.py:527 - 开始导出所有案例到Excel
 2025-05-29 11:57:41 - api - INFO - main.py:561 - 成功准备 6 条案例数据到Excel
 2025-05-29 11:57:41 - api - INFO - main.py:49 - 请求完成: POST http://localhost:8000/api/export-all-cases-excel - 状态码: 200 - 耗时: 0.610s
+=======
+2025-05-29 13:23:59 - pdf_processor - INFO - pdf_processor.py:24 - 初始化PDF处理器
+2025-05-29 13:23:59 - pdf_processor - INFO - pdf_processor.py:44 - 百度OCR API密钥已配置
+2025-05-29 13:23:59 - pdf_processor - INFO - pdf_processor.py:49 - VLM API密钥已配置，Base URL: https://api.ablai.top/v1, 模型: gemini-2.5-flash-preview-05-20
+2025-05-29 13:23:59 - ai_extractor - INFO - ai_extractor.py:19 - 初始化AI信息提取器
+2025-05-29 13:23:59 - ai_extractor - INFO - ai_extractor.py:32 - API密钥已配置。Base URL: https://api.ablai.top/v1
+2025-05-29 13:23:59 - ai_extractor - INFO - ai_extractor.py:39 - OpenAI异步客户端已成功初始化。
+2025-05-29 13:23:59 - ai_extractor - INFO - ai_extractor.py:44 - LLM模型配置: gemini-2.5-flash-preview-05-20
+2025-05-29 13:23:59 - ai_extractor - INFO - ai_extractor.py:45 - VLM模型配置: gemini-2.5-flash-preview-05-20
+2025-05-29 13:24:07 - pdf_processor - INFO - pdf_processor.py:24 - 初始化PDF处理器
+2025-05-29 13:24:07 - pdf_processor - INFO - pdf_processor.py:44 - 百度OCR API密钥已配置
+2025-05-29 13:24:07 - pdf_processor - INFO - pdf_processor.py:49 - VLM API密钥已配置，Base URL: https://api.ablai.top/v1, 模型: gemini-2.5-flash-preview-05-20
+2025-05-29 13:24:07 - ai_extractor - INFO - ai_extractor.py:19 - 初始化AI信息提取器
+2025-05-29 13:24:07 - ai_extractor - INFO - ai_extractor.py:32 - API密钥已配置。Base URL: https://api.ablai.top/v1
+2025-05-29 13:24:07 - ai_extractor - INFO - ai_extractor.py:39 - OpenAI异步客户端已成功初始化。
+2025-05-29 13:24:07 - ai_extractor - INFO - ai_extractor.py:44 - LLM模型配置: gemini-2.5-flash-preview-05-20
+2025-05-29 13:24:07 - ai_extractor - INFO - ai_extractor.py:45 - VLM模型配置: gemini-2.5-flash-preview-05-20
+2025-05-29 13:24:48 - api - INFO - main.py:41 - 请求开始: GET http://111.231.28.98:8000/api/default-config
+2025-05-29 13:24:48 - api - INFO - main.py:49 - 请求完成: GET http://111.231.28.98:8000/api/default-config - 状态码: 200 - 耗时: 0.001s
+2025-05-29 13:24:49 - api - INFO - main.py:41 - 请求开始: GET http://111.231.28.98:8000/api/cases
+2025-05-29 13:24:49 - api - INFO - main.py:49 - 请求完成: GET http://111.231.28.98:8000/api/cases - 状态码: 200 - 耗时: 0.006s
+2025-05-29 13:24:59 - api - INFO - main.py:41 - 请求开始: GET http://111.231.28.98:8000/api/default-config
+2025-05-29 13:24:59 - api - INFO - main.py:49 - 请求完成: GET http://111.231.28.98:8000/api/default-config - 状态码: 200 - 耗时: 0.001s
+2025-05-29 13:25:00 - api - INFO - main.py:41 - 请求开始: GET http://111.231.28.98:8000/api/cases
+2025-05-29 13:25:00 - api - INFO - main.py:49 - 请求完成: GET http://111.231.28.98:8000/api/cases - 状态码: 200 - 耗时: 0.002s
+2025-05-29 13:25:28 - pdf_processor - INFO - pdf_processor.py:24 - 初始化PDF处理器
+2025-05-29 13:25:28 - pdf_processor - INFO - pdf_processor.py:44 - 百度OCR API密钥已配置
+2025-05-29 13:25:28 - pdf_processor - INFO - pdf_processor.py:49 - VLM API密钥已配置，Base URL: https://api.ablai.top/v1, 模型: gemini-2.5-flash-preview-05-20
+2025-05-29 13:25:28 - ai_extractor - INFO - ai_extractor.py:19 - 初始化AI信息提取器
+2025-05-29 13:25:28 - ai_extractor - INFO - ai_extractor.py:32 - API密钥已配置。Base URL: https://api.ablai.top/v1
+2025-05-29 13:25:28 - ai_extractor - INFO - ai_extractor.py:39 - OpenAI异步客户端已成功初始化。
+2025-05-29 13:25:28 - ai_extractor - INFO - ai_extractor.py:44 - LLM模型配置: gemini-2.5-flash-preview-05-20
+2025-05-29 13:25:28 - ai_extractor - INFO - ai_extractor.py:45 - VLM模型配置: gemini-2.5-flash-preview-05-20
+2025-05-29 13:25:39 - api - INFO - main.py:41 - 请求开始: POST http://111.231.28.98:8000/api/upload
+2025-05-29 13:25:40 - api - INFO - main.py:98 - 开始上传PDF文件: 4-证据材料_钱双.pdf
+2025-05-29 13:25:40 - api - INFO - main.py:120 - 文件保存成功: uploads/48a2a563-e95c-43e5-bd68-ed5e2ae9a357.pdf, 大小: 4032866 bytes
+2025-05-29 13:25:40 - api - INFO - main.py:134 - 数据库记录创建成功: 48a2a563-e95c-43e5-bd68-ed5e2ae9a357
+2025-05-29 13:25:40 - api - INFO - main.py:138 - 后台处理任务已启动: 48a2a563-e95c-43e5-bd68-ed5e2ae9a357
+2025-05-29 13:25:40 - api - INFO - main.py:49 - 请求完成: POST http://111.231.28.98:8000/api/upload - 状态码: 200 - 耗时: 0.707s
+2025-05-29 13:25:40 - api - INFO - main.py:192 - 开始后台处理PDF: 48a2a563-e95c-43e5-bd68-ed5e2ae9a357
+2025-05-29 13:25:40 - api - INFO - main.py:204 - PDF案例状态更新为processing: 48a2a563-e95c-43e5-bd68-ed5e2ae9a357
+2025-05-29 13:25:40 - api - INFO - main.py:207 - 开始读取PDF并分割: 48a2a563-e95c-43e5-bd68-ed5e2ae9a357
+2025-05-29 13:25:40 - api - INFO - main.py:209 - PDF信息: {'total_pages': 9, 'metadata': {'format': 'PDF 1.4', 'title': '', 'author': '', 'subject': '', 'keywords': '', 'creator': '', 'producer': 'PyPDF2', 'creationDate': '', 'modDate': '', 'trapped': '', 'encryption': None}, 'file_size': 4032866, 'file_name': '48a2a563-e95c-43e5-bd68-ed5e2ae9a357.pdf'}
+2025-05-29 13:25:40 - pdf_processor - INFO - pdf_processor.py:60 - 开始将PDF转换为图片: uploads/48a2a563-e95c-43e5-bd68-ed5e2ae9a357.pdf
+2025-05-29 13:25:40 - pdf_processor - INFO - pdf_processor.py:76 - 处理全部页数: 9
+2025-05-29 13:25:43 - pdf_processor - INFO - pdf_processor.py:93 - PDF转图片完成，共转换9页
+2025-05-29 13:25:43 - api - INFO - main.py:216 - PDF转图片完成，共9页
+2025-05-29 13:25:43 - api - INFO - main.py:219 - 开始组合文本提取: 48a2a563-e95c-43e5-bd68-ed5e2ae9a357
+2025-05-29 13:25:43 - pdf_processor - INFO - pdf_processor.py:353 - 开始组合文本提取，共9页图片
+2025-05-29 13:25:43 - pdf_processor - INFO - pdf_processor.py:258 - 开始批量处理9页图片
+2025-05-29 13:25:43 - pdf_processor - INFO - pdf_processor.py:483 - 开始获取百度API access_token
+2025-05-29 13:25:43 - pdf_processor - INFO - pdf_processor.py:505 - 百度access_token获取成功
+2025-05-29 13:25:43 - pdf_processor - INFO - pdf_processor.py:265 - 开始串行OCR处理（QPS控制）
+2025-05-29 13:26:17 - pdf_processor - INFO - pdf_processor.py:294 - 开始并行VLM处理（前3页）
+2025-05-29 13:26:19 - api - INFO - main.py:41 - 请求开始: GET http://111.231.28.98:8000/api/cases
+2025-05-29 13:26:19 - api - INFO - main.py:41 - 请求开始: GET http://localhost:8000/user_uploads/48a2a563-e95c-43e5-bd68-ed5e2ae9a357.pdf
+2025-05-29 13:26:19 - api - INFO - main.py:41 - 请求开始: POST http://111.231.28.98:8000/api/upload
+2025-05-29 13:26:19 - api - INFO - main.py:41 - 请求开始: GET http://111.231.28.98:8000/api/cases
+2025-05-29 13:26:19 - api - INFO - main.py:41 - 请求开始: GET http://111.231.28.98:8000/api/cases
+2025-05-29 13:26:19 - api - INFO - main.py:41 - 请求开始: GET http://111.231.28.98:8000/api/default-config
+2025-05-29 13:26:19 - api - INFO - main.py:49 - 请求完成: GET http://111.231.28.98:8000/api/default-config - 状态码: 200 - 耗时: 0.002s
+2025-05-29 13:26:19 - api - INFO - main.py:49 - 请求完成: GET http://111.231.28.98:8000/api/cases - 状态码: 200 - 耗时: 0.058s
+2025-05-29 13:26:19 - api - INFO - main.py:49 - 请求完成: GET http://localhost:8000/user_uploads/48a2a563-e95c-43e5-bd68-ed5e2ae9a357.pdf - 状态码: 200 - 耗时: 0.055s
+2025-05-29 13:26:19 - api - INFO - main.py:49 - 请求完成: GET http://111.231.28.98:8000/api/cases - 状态码: 200 - 耗时: 0.051s
+2025-05-29 13:26:19 - api - INFO - main.py:49 - 请求完成: GET http://111.231.28.98:8000/api/cases - 状态码: 200 - 耗时: 0.055s
+2025-05-29 13:26:19 - api - INFO - main.py:41 - 请求开始: GET http://111.231.28.98:8000/api/cases
+2025-05-29 13:26:19 - api - INFO - main.py:49 - 请求完成: GET http://111.231.28.98:8000/api/cases - 状态码: 200 - 耗时: 0.002s
+2025-05-29 13:26:19 - api - INFO - main.py:41 - 请求开始: GET http://localhost:8000/user_uploads/48a2a563-e95c-43e5-bd68-ed5e2ae9a357.pdf
+2025-05-29 13:26:19 - api - INFO - main.py:49 - 请求完成: GET http://localhost:8000/user_uploads/48a2a563-e95c-43e5-bd68-ed5e2ae9a357.pdf - 状态码: 200 - 耗时: 0.001s
+2025-05-29 13:26:19 - api - INFO - main.py:49 - 请求完成: POST http://111.231.28.98:8000/api/upload - 状态码: 400 - 耗时: 0.284s
+2025-05-29 13:26:25 - api - INFO - main.py:41 - 请求开始: GET http://111.231.28.98:8000/api/cases
+2025-05-29 13:26:25 - api - INFO - main.py:49 - 请求完成: GET http://111.231.28.98:8000/api/cases - 状态码: 200 - 耗时: 0.002s
+2025-05-29 13:26:30 - api - INFO - main.py:41 - 请求开始: GET http://111.231.28.98:8000/api/cases
+2025-05-29 13:26:30 - api - INFO - main.py:49 - 请求完成: GET http://111.231.28.98:8000/api/cases - 状态码: 200 - 耗时: 0.002s
+2025-05-29 13:26:34 - api - INFO - main.py:41 - 请求开始: GET http://111.231.28.98:8000/api/cases
+2025-05-29 13:26:34 - api - INFO - main.py:49 - 请求完成: GET http://111.231.28.98:8000/api/cases - 状态码: 200 - 耗时: 0.002s
+2025-05-29 13:26:39 - api - INFO - main.py:41 - 请求开始: GET http://111.231.28.98:8000/api/cases
+2025-05-29 13:26:39 - api - INFO - main.py:49 - 请求完成: GET http://111.231.28.98:8000/api/cases - 状态码: 200 - 耗时: 0.002s
+2025-05-29 13:26:40 - api - INFO - main.py:41 - 请求开始: POST http://111.231.28.98:8000/api/upload
+2025-05-29 13:26:40 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 13:26:40 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 13:26:40 - pdf_processor - ERROR - pdf_processor.py:245 - 第1页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 13:26:41 - api - INFO - main.py:98 - 开始上传PDF文件: 4-证据材料_李乾峰.pdf
+2025-05-29 13:26:41 - api - INFO - main.py:120 - 文件保存成功: uploads/49ca6a3b-484e-455e-9340-214582a79933.pdf, 大小: 3982570 bytes
+2025-05-29 13:26:41 - api - INFO - main.py:134 - 数据库记录创建成功: 49ca6a3b-484e-455e-9340-214582a79933
+2025-05-29 13:26:41 - api - INFO - main.py:138 - 后台处理任务已启动: 49ca6a3b-484e-455e-9340-214582a79933
+2025-05-29 13:26:41 - api - INFO - main.py:49 - 请求完成: POST http://111.231.28.98:8000/api/upload - 状态码: 200 - 耗时: 0.655s
+2025-05-29 13:26:41 - api - INFO - main.py:192 - 开始后台处理PDF: 49ca6a3b-484e-455e-9340-214582a79933
+2025-05-29 13:26:41 - api - INFO - main.py:204 - PDF案例状态更新为processing: 49ca6a3b-484e-455e-9340-214582a79933
+2025-05-29 13:26:41 - api - INFO - main.py:207 - 开始读取PDF并分割: 49ca6a3b-484e-455e-9340-214582a79933
+2025-05-29 13:26:41 - api - INFO - main.py:209 - PDF信息: {'total_pages': 9, 'metadata': {'format': 'PDF 1.4', 'title': '', 'author': '', 'subject': '', 'keywords': '', 'creator': '', 'producer': 'PyPDF2', 'creationDate': '', 'modDate': '', 'trapped': '', 'encryption': None}, 'file_size': 3982570, 'file_name': '49ca6a3b-484e-455e-9340-214582a79933.pdf'}
+2025-05-29 13:26:41 - pdf_processor - INFO - pdf_processor.py:60 - 开始将PDF转换为图片: uploads/49ca6a3b-484e-455e-9340-214582a79933.pdf
+2025-05-29 13:26:41 - pdf_processor - INFO - pdf_processor.py:76 - 处理全部页数: 9
+2025-05-29 13:26:43 - pdf_processor - INFO - pdf_processor.py:93 - PDF转图片完成，共转换9页
+2025-05-29 13:26:43 - api - INFO - main.py:216 - PDF转图片完成，共9页
+2025-05-29 13:26:43 - api - INFO - main.py:219 - 开始组合文本提取: 49ca6a3b-484e-455e-9340-214582a79933
+2025-05-29 13:26:43 - pdf_processor - INFO - pdf_processor.py:353 - 开始组合文本提取，共9页图片
+2025-05-29 13:26:43 - pdf_processor - INFO - pdf_processor.py:258 - 开始批量处理9页图片
+2025-05-29 13:26:43 - pdf_processor - INFO - pdf_processor.py:265 - 开始串行OCR处理（QPS控制）
+2025-05-29 13:27:17 - pdf_processor - INFO - pdf_processor.py:294 - 开始并行VLM处理（前3页）
+2025-05-29 13:27:18 - api - INFO - main.py:41 - 请求开始: GET http://111.231.28.98:8000/api/cases
+2025-05-29 13:27:18 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 13:27:18 - api - INFO - main.py:41 - 请求开始: GET http://localhost:8000/user_uploads/49ca6a3b-484e-455e-9340-214582a79933.pdf
+2025-05-29 13:27:18 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 13:27:18 - pdf_processor - ERROR - pdf_processor.py:245 - 第2页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 13:27:18 - api - INFO - main.py:41 - 请求开始: GET http://localhost:8000/user_uploads/48a2a563-e95c-43e5-bd68-ed5e2ae9a357.pdf
+2025-05-29 13:27:18 - api - INFO - main.py:41 - 请求开始: GET http://localhost:8000/user_uploads/49ca6a3b-484e-455e-9340-214582a79933.pdf
+2025-05-29 13:27:18 - api - INFO - main.py:41 - 请求开始: GET http://localhost:8000/user_uploads/48a2a563-e95c-43e5-bd68-ed5e2ae9a357.pdf
+2025-05-29 13:27:18 - api - INFO - main.py:41 - 请求开始: GET http://111.231.28.98:8000/api/cases
+2025-05-29 13:27:18 - api - INFO - main.py:41 - 请求开始: GET http://111.231.28.98:8000/api/default-config
+2025-05-29 13:27:18 - api - INFO - main.py:49 - 请求完成: GET http://localhost:8000/user_uploads/49ca6a3b-484e-455e-9340-214582a79933.pdf - 状态码: 200 - 耗时: 0.005s
+2025-05-29 13:27:18 - api - INFO - main.py:49 - 请求完成: GET http://localhost:8000/user_uploads/48a2a563-e95c-43e5-bd68-ed5e2ae9a357.pdf - 状态码: 304 - 耗时: 0.005s
+2025-05-29 13:27:18 - api - INFO - main.py:49 - 请求完成: GET http://111.231.28.98:8000/api/default-config - 状态码: 200 - 耗时: 0.002s
+2025-05-29 13:27:18 - api - INFO - main.py:49 - 请求完成: GET http://localhost:8000/user_uploads/49ca6a3b-484e-455e-9340-214582a79933.pdf - 状态码: 200 - 耗时: 0.005s
+2025-05-29 13:27:18 - api - INFO - main.py:49 - 请求完成: GET http://111.231.28.98:8000/api/cases - 状态码: 200 - 耗时: 0.008s
+2025-05-29 13:27:18 - api - INFO - main.py:49 - 请求完成: GET http://localhost:8000/user_uploads/48a2a563-e95c-43e5-bd68-ed5e2ae9a357.pdf - 状态码: 200 - 耗时: 0.005s
+2025-05-29 13:27:18 - api - INFO - main.py:49 - 请求完成: GET http://111.231.28.98:8000/api/cases - 状态码: 200 - 耗时: 0.004s
+2025-05-29 13:27:19 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: 
+2025-05-29 13:27:19 - pdf_processor - ERROR - pdf_processor.py:245 - 第3页VLM处理错误: 
+2025-05-29 13:27:19 - pdf_processor - INFO - pdf_processor.py:344 - 批量处理完成: OCR成功9/9页, VLM成功0/3页
+2025-05-29 13:27:19 - pdf_processor - INFO - pdf_processor.py:383 - 组合文本提取完成
+2025-05-29 13:27:19 - api - INFO - main.py:226 - 组合文本提取完成: 48a2a563-e95c-43e5-bd68-ed5e2ae9a357
+2025-05-29 13:27:19 - api - INFO - main.py:231 - 开始LLM信息提取: 48a2a563-e95c-43e5-bd68-ed5e2ae9a357
+2025-05-29 13:27:19 - ai_extractor - INFO - ai_extractor.py:163 - 通过OpenAI客户端调用LLM进行信息提取，模型: gemini-2.5-flash-preview-05-20
+2025-05-29 13:27:26 - api - INFO - main.py:41 - 请求开始: GET http://111.231.28.98:8000/api/default-config
+2025-05-29 13:27:26 - api - INFO - main.py:49 - 请求完成: GET http://111.231.28.98:8000/api/default-config - 状态码: 200 - 耗时: 0.001s
+2025-05-29 13:27:26 - api - INFO - main.py:41 - 请求开始: GET http://111.231.28.98:8000/api/cases
+2025-05-29 13:27:26 - api - INFO - main.py:49 - 请求完成: GET http://111.231.28.98:8000/api/cases - 状态码: 200 - 耗时: 0.002s
+2025-05-29 13:27:31 - api - INFO - main.py:41 - 请求开始: GET http://111.231.28.98:8000/api/cases
+2025-05-29 13:27:31 - api - INFO - main.py:49 - 请求完成: GET http://111.231.28.98:8000/api/cases - 状态码: 200 - 耗时: 0.002s
+2025-05-29 13:27:34 - ai_extractor - INFO - ai_extractor.py:249 - 成功初步解析API返回的JSON响应。
+2025-05-29 13:27:34 - ai_extractor - INFO - ai_extractor.py:274 - Pydantic模型验证和类型转换成功。
+2025-05-29 13:27:34 - api - INFO - main.py:260 - LLM信息提取完成: 48a2a563-e95c-43e5-bd68-ed5e2ae9a357
+2025-05-29 13:27:34 - api - INFO - main.py:286 - PDF处理完成: 48a2a563-e95c-43e5-bd68-ed5e2ae9a357
+2025-05-29 13:27:36 - api - INFO - main.py:41 - 请求开始: GET http://111.231.28.98:8000/api/cases
+2025-05-29 13:27:36 - api - INFO - main.py:49 - 请求完成: GET http://111.231.28.98:8000/api/cases - 状态码: 200 - 耗时: 0.002s
+2025-05-29 13:27:38 - api - INFO - main.py:41 - 请求开始: GET http://localhost:8000/user_uploads/49ca6a3b-484e-455e-9340-214582a79933.pdf
+2025-05-29 13:27:38 - api - INFO - main.py:49 - 请求完成: GET http://localhost:8000/user_uploads/49ca6a3b-484e-455e-9340-214582a79933.pdf - 状态码: 200 - 耗时: 0.001s
+2025-05-29 13:27:41 - api - INFO - main.py:41 - 请求开始: GET http://111.231.28.98:8000/api/cases
+2025-05-29 13:27:41 - api - INFO - main.py:49 - 请求完成: GET http://111.231.28.98:8000/api/cases - 状态码: 200 - 耗时: 0.002s
+2025-05-29 13:27:43 - api - INFO - main.py:41 - 请求开始: GET http://localhost:8000/user_uploads/48a2a563-e95c-43e5-bd68-ed5e2ae9a357.pdf
+2025-05-29 13:27:43 - api - INFO - main.py:49 - 请求完成: GET http://localhost:8000/user_uploads/48a2a563-e95c-43e5-bd68-ed5e2ae9a357.pdf - 状态码: 200 - 耗时: 0.001s
+2025-05-29 13:27:46 - api - INFO - main.py:41 - 请求开始: GET http://111.231.28.98:8000/api/cases
+2025-05-29 13:27:46 - api - INFO - main.py:49 - 请求完成: GET http://111.231.28.98:8000/api/cases - 状态码: 200 - 耗时: 0.002s
+2025-05-29 13:27:51 - api - INFO - main.py:41 - 请求开始: GET http://111.231.28.98:8000/api/cases
+2025-05-29 13:27:51 - api - INFO - main.py:49 - 请求完成: GET http://111.231.28.98:8000/api/cases - 状态码: 200 - 耗时: 0.002s
+2025-05-29 13:27:56 - api - INFO - main.py:41 - 请求开始: GET http://111.231.28.98:8000/api/cases
+2025-05-29 13:27:56 - api - INFO - main.py:49 - 请求完成: GET http://111.231.28.98:8000/api/cases - 状态码: 200 - 耗时: 0.002s
+2025-05-29 13:27:58 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 13:27:58 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 13:27:58 - pdf_processor - ERROR - pdf_processor.py:245 - 第2页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 13:27:58 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 13:27:58 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 13:27:58 - pdf_processor - ERROR - pdf_processor.py:245 - 第3页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 13:27:58 - pdf_processor - ERROR - pdf_processor.py:669 - VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 13:27:58 - pdf_processor - ERROR - pdf_processor.py:673 - VLM API调用异常: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 13:27:58 - pdf_processor - ERROR - pdf_processor.py:245 - 第1页VLM处理错误: VLM API调用失败: 404, {"error":{"message":"Invalid URL (POST /v1/v1/chat/completions), you may need [POST /v1/chat/completions]","type":"invalid_request_error","param":"","code":""}}
+2025-05-29 13:27:58 - pdf_processor - INFO - pdf_processor.py:344 - 批量处理完成: OCR成功9/9页, VLM成功0/3页
+2025-05-29 13:27:58 - pdf_processor - INFO - pdf_processor.py:383 - 组合文本提取完成
+2025-05-29 13:27:58 - api - INFO - main.py:226 - 组合文本提取完成: 49ca6a3b-484e-455e-9340-214582a79933
+2025-05-29 13:27:58 - api - INFO - main.py:231 - 开始LLM信息提取: 49ca6a3b-484e-455e-9340-214582a79933
+2025-05-29 13:27:58 - ai_extractor - INFO - ai_extractor.py:163 - 通过OpenAI客户端调用LLM进行信息提取，模型: gemini-2.5-flash-preview-05-20
+2025-05-29 13:28:01 - api - INFO - main.py:41 - 请求开始: GET http://111.231.28.98:8000/api/cases
+2025-05-29 13:28:01 - api - INFO - main.py:49 - 请求完成: GET http://111.231.28.98:8000/api/cases - 状态码: 200 - 耗时: 0.002s
+2025-05-29 13:28:07 - api - INFO - main.py:41 - 请求开始: GET http://111.231.28.98:8000/api/cases
+2025-05-29 13:28:07 - api - INFO - main.py:49 - 请求完成: GET http://111.231.28.98:8000/api/cases - 状态码: 200 - 耗时: 0.002s
+2025-05-29 13:28:10 - ai_extractor - INFO - ai_extractor.py:249 - 成功初步解析API返回的JSON响应。
+2025-05-29 13:28:10 - ai_extractor - INFO - ai_extractor.py:274 - Pydantic模型验证和类型转换成功。
+2025-05-29 13:28:10 - api - INFO - main.py:260 - LLM信息提取完成: 49ca6a3b-484e-455e-9340-214582a79933
+2025-05-29 13:28:10 - api - INFO - main.py:286 - PDF处理完成: 49ca6a3b-484e-455e-9340-214582a79933
+2025-05-29 13:28:11 - api - INFO - main.py:41 - 请求开始: GET http://111.231.28.98:8000/api/cases
+2025-05-29 13:28:11 - api - INFO - main.py:49 - 请求完成: GET http://111.231.28.98:8000/api/cases - 状态码: 200 - 耗时: 0.002s
+2025-05-29 13:30:35 - pdf_processor - INFO - pdf_processor.py:24 - 初始化PDF处理器
+2025-05-29 13:30:35 - pdf_processor - INFO - pdf_processor.py:44 - 百度OCR API密钥已配置
+2025-05-29 13:30:35 - pdf_processor - INFO - pdf_processor.py:49 - VLM API密钥已配置，Base URL: https://api.ablai.top/v1, 模型: gemini-2.5-flash-preview-05-20
+2025-05-29 13:30:35 - ai_extractor - INFO - ai_extractor.py:19 - 初始化AI信息提取器
+2025-05-29 13:30:35 - ai_extractor - INFO - ai_extractor.py:32 - API密钥已配置。Base URL: https://api.ablai.top/v1
+2025-05-29 13:30:35 - ai_extractor - INFO - ai_extractor.py:39 - OpenAI异步客户端已成功初始化。
+2025-05-29 13:30:35 - ai_extractor - INFO - ai_extractor.py:44 - LLM模型配置: gemini-2.5-flash-preview-05-20
+2025-05-29 13:30:35 - ai_extractor - INFO - ai_extractor.py:45 - VLM模型配置: gemini-2.5-flash-preview-05-20
+>>>>>>> 7d9c4f18e1c31c4989c069282dc2246d936c2280

@@ -4,3 +4,5 @@ frontend/node_modules/*
 .env
 backend/uploads/*
 backend/logs/*
+frontend/dist/*
+>>>>>>> 7d9c4f18e1c31c4989c069282dc2246d936c2280
