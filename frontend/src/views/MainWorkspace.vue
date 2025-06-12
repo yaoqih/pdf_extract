@@ -878,25 +878,32 @@ const manualRefresh = async () => {
   }
 };
 
-const doRefresh = () => {
-  manualRefresh();
+const handleVisibilityChange = () => {
+  if (document.visibilityState === 'visible') {
+    manualRefresh();
+  }
 };
 
 onMounted(async () => {
-  await loadDefaultConfig(); // Load default fields first
-  await loadCases();
+  if (localStorage.getItem('default_template_updated') === 'true') {
+    localStorage.removeItem('default_template_updated');
+    await manualRefresh();
+  } else {
+    await loadDefaultConfig(); // Load default fields first
+    await loadCases();
+  }
   startPolling();
   if (cases.value.length > 0 && !selectedCaseId.value) {
     // Optionally auto-select first case on load
     selectedCaseId.value = cases.value[0].id;
   }
-  document.addEventListener('refresh-workspace', doRefresh);
+  document.addEventListener('visibilitychange', handleVisibilityChange);
 });
 
 import { onBeforeUnmount } from 'vue';
 onBeforeUnmount(() => {
   stopPolling();
-  document.removeEventListener('refresh-workspace', doRefresh);
+  document.removeEventListener('visibilitychange', handleVisibilityChange);
 });
 
 </script>

@@ -58,9 +58,7 @@ async def log_requests(request: Request, call_next):
 # CORS中间件配置
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "*", 
-    ],
+    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -373,7 +371,7 @@ async def reprocess_case(
     if config and config.extraction_fields is not None:
         case.extraction_fields = [field.model_dump() for field in config.extraction_fields]
     if config and config.custom_prompt is not None:
-        case.custom_prompt = config.custom_prompt
+            case.custom_prompt = config.custom_prompt
     
     # 重新处理
     background_tasks.add_task(process_pdf_background, case_id, os.path.join("uploads", case.file_path))
