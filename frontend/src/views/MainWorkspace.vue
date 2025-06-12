@@ -331,6 +331,7 @@ import {
   ZoomIn, ZoomOut, ArrowLeft, ArrowRight
 } from '@element-plus/icons-vue';
 import { pdfApi } from '../api';
+import { getApiBaseURL, getBackendBaseURL } from '../config/index.js';
 import ExtractionConfig from '../components/ExtractionConfig.vue';
 import PageProcessingDetails from '../components/PageProcessingDetails.vue'; // Assuming this component is adapted
 
@@ -342,11 +343,18 @@ const cases = ref([]);
 const loadingCases = ref(false);
 const selectedCaseId = ref(null);
 const selectedCase = computed(() => cases.value.find(c => c.id === selectedCaseId.value));
+
+// 动态获取PDF文件URL
+const getPdfFileUrl = (fileName) => {
+  const backendBaseUrl = getBackendBaseURL();
+  return `${backendBaseUrl}/user_uploads/${fileName}`;
+};
+
 const selectedCasePdfUrl = computed(() => {
   if (selectedCase.value && selectedCase.value.file_path) {
     // Assuming backend serves files from 'uploads' at '/user_uploads/'
     const fileName = selectedCase.value.file_path.split(/[\\/]/).pop(); // OS-agnostic path splitting
-    return `http://localhost:8000/user_uploads/${fileName}`;
+    return getPdfFileUrl(fileName);
   }
   return null;
 });
@@ -395,7 +403,7 @@ watchEffect(() => {
   let newUrl = null;
   if (currentCase && currentCase.file_path) {
     const fileName = currentCase.file_path.split(/[\\/]/).pop(); // OS-agnostic path splitting
-    newUrl = `http://localhost:8000/user_uploads/${fileName}`;
+    newUrl = getPdfFileUrl(fileName);
   }
 
   if (newUrl) {

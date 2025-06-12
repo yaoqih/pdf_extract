@@ -40,6 +40,19 @@ export const getApiBaseURL = () => {
   return `http://${hostname}:${config.production.backendPort}/api`
 }
 
+// 动态获取后端基础URL（不含/api路径）
+export const getBackendBaseURL = () => {
+  const hostname = window.location.hostname
+  
+  // 本地开发环境
+  if (hostname === 'localhost' || hostname === '127.0.0.1') {
+    return 'http://localhost:8000'
+  }
+  
+  // 生产环境或其他IP
+  return `http://${hostname}:${config.production.backendPort}`
+}
+
 // 导出配置
 export default getCurrentConfig()
 export { config, getEnvironment } 
