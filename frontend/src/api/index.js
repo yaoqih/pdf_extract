@@ -1,9 +1,10 @@
 import axios from 'axios'
 import { ElMessage } from 'element-plus'
+import { getApiBaseURL } from '../config/index.js'
 
 // 创建axios实例
 const api = axios.create({
-  baseURL: 'http://localhost:8000/api',
+  baseURL: getApiBaseURL(),
   timeout: 60000,
   headers: {
     'Content-Type': 'application/json'
